@@ -11,5 +11,6 @@ import java.util.Optional;
 
 @Repository
 public interface ConcertRepository extends JpaRepository<Concert, String> {
+    @Query(nativeQuery = true)
     public List<Concert> findTop1ByCode(String code);
 }
