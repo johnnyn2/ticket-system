@@ -14,6 +14,10 @@ public class AccountController {
     private AccountService accountService;
     @GetMapping("/account")
     public ResponseEntity<AccountDTO> getAccount(@RequestParam("accountNo") String accountNo) {
-        return ResponseEntity.ok(accountService.getAccountInfoByAccountNo(accountNo));
+        AccountDTO accountDTO = accountService.getAccountInfoByAccountNo(accountNo);
+        if (accountDTO == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(accountDTO);
     }
 }

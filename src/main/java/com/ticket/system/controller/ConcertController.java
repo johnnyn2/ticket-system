@@ -14,6 +14,10 @@ public class ConcertController {
     private ConcertService concertService;
     @GetMapping("/concert")
     public ResponseEntity<ConcertDTO> getConcert(@RequestParam String code) {
-        return ResponseEntity.ok(concertService.getConcertByCode(code));
+        ConcertDTO concertDTO = concertService.getConcertByCode(code);
+        if (concertDTO == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(concertDTO);
     }
 }

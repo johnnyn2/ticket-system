@@ -4,4 +4,8 @@
     <include file="classpath:/db/changelog/20240414_alter_table_columns_size.sql" relativeToChangelogFile="false" />
     <include file="classpath:/db/changelog/20240414_insert_sample_accounts.sql" relativeToChangelogFile="false" />
     <include file="classpath:/db/changelog/20240414_insert_sample_concerts.sql" relativeToChangelogFile="false" />
+    <include file="classpath:/db/changelog/20240415_update_timestamp_format.sql" relativeToChangelogFile="false" />
+    <include file="classpath:/db/changelog/20240420_update_timestamp_02.sql" relativeToChangelogFile="false" />
+    <include file="classpath:/db/changelog/20240420_update_timestamp_03.sql" relativeToChangelogFile="false" />
+    <include file="classpath:/db/changelog/20240420_update_created_on_modified_on_datatype.sql" relativeToChangelogFile="false" />
 </databaseChangeLog>
