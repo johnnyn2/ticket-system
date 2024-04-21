@@ -28,6 +28,7 @@ public class AccountService {
             }
             log.info("Not found account - accountNo: " + accountNo);
         } catch(Exception e) {
+            log.error("Account Repository exception");
             e.printStackTrace();
         }
         return null;
